@@ -13,10 +13,10 @@ import operations from "./wundergraph.operations";
 const stripe = introspect.openApi({
   apiNamespace: "stripe",
   source: {
-    kind: "file",
-    filePath: "spec3.json",
+    kind: "string",
+    openAPISpec:
+      "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/uspto.yaml",
   },
-  baseURL: "https://raw.githubusercontent.com/stripe/openapi/master/openapi/",
 });
 
 const myApplication = new Application({
